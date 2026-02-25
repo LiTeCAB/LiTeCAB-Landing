@@ -265,7 +265,7 @@ body {
   grid-template-columns: 1fr 1.2fr !important;
   gap: 96px;
   align-items: center;
-  min-height: 420px;
+  min-height: 520px;
 }
 
 .solution-left {
@@ -285,7 +285,7 @@ body {
 .solution-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .video-badge-btn {
@@ -300,7 +300,6 @@ body {
   padding: 6px 14px;
   border-radius: 6px;
   margin-bottom: 16px;
-  align-self: flex-start;
 }
 
 /* ── Features ── */
@@ -335,13 +334,12 @@ body {
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-  flex: 1;
-  display: flex;
+  width: 100%;
 }
 
 .video-frame video {
   width: 100%;
-  height: 100%;
+  height: 380px;
   object-fit: cover;
   display: block;
   background: #0a1220;
