@@ -29,11 +29,11 @@ body {
 
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
-  height: 60px;
+  height: 72px;
 }
 
-.nav-brand { display: flex; align-items: center; }
-.nav-logo { height: 30px; }
+.nav-brand { display: flex; align-items: center; height: 100%; }
+.nav-logo { height: 44px; }
 
 .nav-links { display: flex; align-items: center; gap: 28px; }
 
@@ -67,7 +67,7 @@ body {
     #0f1a2e;
 }
 
-.hero-inner { max-width: 680px; margin: 0 auto; }
+.hero-inner { max-width: 800px; margin: 0 auto; }
 
 .hero-tag {
   display: inline-block;
@@ -80,9 +80,9 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.12;
   margin-bottom: 20px;
   color: #fff;
 }
@@ -167,36 +167,55 @@ body {
   margin-bottom: 36px;
 }
 
+/* ── Problem section (light) ── */
+.section-light {
+  background: #f4f7fb;
+  color: #1a2a42;
+}
+
+.section-light .section-heading {
+  color: #1a2a42;
+}
+
+.section-light .section-lead {
+  color: #5f6e82;
+}
+
 /* ── Problem cards ── */
 .cards-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 18px;
 }
 
 .card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
+  background: #fff;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
-  padding: 28px 22px;
+  padding: 32px 24px;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .card-icon {
-  font-size: 1.8rem;
-  margin-bottom: 12px;
+  display: flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px;
+  margin: 0 auto 16px;
+  background: #eef6f5;
+  border-radius: 10px;
+  color: #2a9d8f;
 }
 
 .card h3 {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #fff;
+  color: #1a2a42;
 }
 
 .card p {
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.5);
+  color: #5f6e82;
   line-height: 1.55;
 }
 
@@ -257,7 +276,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 32px;
-  align-items: start;
+  align-items: center;
 }
 
 .cta-text h2 {
