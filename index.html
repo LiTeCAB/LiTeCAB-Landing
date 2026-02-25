@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiTeCAB Desktop | LCA + TEA for Battery Processes</title>
+  <meta name="description" content="LiTeCAB Desktop helps teams run battery process LCA and TEA with built-in TRACI data, fast templates, and guided workflows.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-orb bg-orb-a" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb-b" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">LiTeCAB Desktop</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#walkthrough">Walkthrough</a>
+        <a href="#interest">Interest + Inquiry</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Battery process analysis without setup drag</p>
+          <h1>Move from process idea to LCA + TEA results in minutes.</h1>
+          <p class="hero-text">
+            LiTeCAB Desktop is a standalone application for battery manufacturing and recycling teams.
+            Use built-in templates, customize your process inventory, and evaluate environmental and cost impacts in one workflow.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#interest">Request Access</a>
+            <a class="btn btn-secondary" href="#walkthrough">See Walkthrough</a>
+          </div>
+        </div>
+        <aside class="hero-panel reveal reveal-delay" aria-label="Key product highlights">
+          <h2>What you can do now</h2>
+          <ul>
+            <li><span>Instant TRACI-based LCA</span><small>Pre-computed impact scores included</small></li>
+            <li><span>TEA cost modeling</span><small>Track per-process and total cost drivers</small></li>
+            <li><span>Template + custom workflows</span><small>Use built-ins or upload your own process data</small></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <h2 class="section-title reveal">Why teams use LiTeCAB Desktop</h2>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3>Speed to first result</h3>
+            <p>Skip external DB installs and backend setup. Start with curated battery process templates and run analysis immediately.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay">
+            <h3>One workspace, multiple lenses</h3>
+            <p>Edit process inventories, run LCA, run TEA, and inspect contribution breakdowns without switching tools.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <h3>Scenario-ready data model</h3>
+            <p>Save project states, iterate assumptions, and compare outcomes for research, design, and planning decisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section walkthrough" id="walkthrough">
+      <div class="container">
+        <h2 class="section-title reveal">Product walkthrough</h2>
+        <p class="section-subtitle reveal">A quick path from startup screen to export-ready analysis.</p>
+
+        <ol class="walkthrough-steps">
+          <li class="step reveal">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Start or load a project</h3>
+              <p>Open LiTeCAB and choose <strong>New Project</strong> for templates/custom uploads or <strong>Load Saved</strong> for existing work.</p>
+            </div>
+          </li>
+          <li class="step reveal reveal-delay">
+            <span class="step-num">2</span>
+            <div>
+              <h3>Select and shape your process model</h3>
+              <p>Pick a manufacturing/recycling template, then edit inputs, units, and costs based on your scenario assumptions.</p>
+            </div>
+          </li>
+          <li class="step reveal reveal-delay-2">
+            <span class="step-num">3</span>
+            <div>
+              <h3>Run LCA and TEA</h3>
+              <p>Generate TRACI impact and cost outputs, inspect process-level contributions, and validate what drives your totals.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">4</span>
+            <div>
+              <h3>Export and share</h3>
+              <p>Export results for reporting, stakeholder review, and side-by-side scenario comparisons.</p>
+            </div>
+          </li>
+        </ol>
+
+        <p class="walkthrough-note reveal">
+          Need a full product demo? Use the form below and select <strong>Live demo</strong> as your preferred next step.
+        </p>
+      </div>
+    </section>
+
+    <section class="section interest" id="interest">
+      <div class="container interest-grid">
+        <div class="interest-copy reveal">
+          <h2 class="section-title">Interest + Inquiry</h2>
+          <p>
+            Tell us who you are, what you want to evaluate, and any specific question you want answered.
+            We will follow up with the right next step (access, demo, or technical response).
+          </p>
+          <div class="storage-note">
+            <h3>Where your submission is stored</h3>
+            <p>
+              This form submits to a Google Apps Script endpoint connected to a Google Sheet.
+              Each submission creates a new row in that sheet for follow-up and tracking.
+            </p>
+          </div>
+        </div>
+
+        <form id="interest-form" class="interest-form reveal reveal-delay" novalidate>
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="organization">Organization</label>
+            <input id="organization" name="organization" type="text" autocomplete="organization">
+          </div>
+
+          <div class="form-row two-col">
+            <div>
+              <label for="interest_level">Interest level</label>
+              <select id="interest_level" name="interest_level" required>
+                <option value="">Select</option>
+                <option value="exploring">Exploring options</option>
+                <option value="active-pilot">Ready for pilot</option>
+                <option value="research-use">Research use case</option>
+              </select>
+            </div>
+            <div>
+              <label for="next_step">Preferred next step</label>
+              <select id="next_step" name="next_step" required>
+                <option value="">Select</option>
+                <option value="early-access">Early access</option>
+                <option value="live-demo">Live demo</option>
+                <option value="technical-discussion">Technical discussion</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="use_case">Primary use case</label>
+            <input id="use_case" name="use_case" type="text" placeholder="e.g., recycling route comparison, material cost sensitivity" required>
+          </div>
+
+          <div class="form-row">
+            <label for="inquiry">Question or inquiry</label>
+            <textarea id="inquiry" name="inquiry" rows="5" placeholder="What should we answer for you?" required></textarea>
+          </div>
+
+          <div class="form-row checkbox-row">
+            <input id="consent" name="consent" type="checkbox" required>
+            <label for="consent">I agree to be contacted about LiTeCAB Desktop.</label>
+          </div>
+
+          <button class="btn btn-primary form-submit" type="submit">Send interest + inquiry</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>LiTeCAB Desktop | Life Cycle Assessment + Techno-Economic Analysis for battery processes</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
