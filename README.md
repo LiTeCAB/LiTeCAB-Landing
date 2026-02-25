@@ -1,19 +1,39 @@
+<div align="center">
+
 # LiTeCAB
 
-**Life Cycle Assessment & Techno-Economic Analysis for Battery Processes**
+**Life Cycle Assessment · Techno-Economic Analysis · Circularity**
 
-LiTeCAB is a desktop application that helps researchers and engineers evaluate the environmental impacts, costs, and material circularity of lithium-ion battery manufacturing and recycling processes.
+*A desktop tool for process-level environmental and cost evaluation*
 
-It ships with built-in TRACI v2.1 impact data and process templates so teams can go from a process concept to LCA and TEA results without external databases, Python, or backend setup.
+---
 
-### Capabilities
+</div>
 
-- **LCA** — 9 TRACI v2.1 impact categories with process-level contribution breakdowns
-- **TEA** — Material, labor, and operational cost modeling per process
-- **Circularity** — Material circularity metrics across key battery materials
-- **Templates** — NMC111, NMC622, NMC811, LFP manufacturing and BRAWS recycling
-- **Custom workflows** — Upload your own process data via CSV
+LiTeCAB helps researchers and engineers move from process concepts to quantified LCA and TEA results — fast. It ships with built-in impact data, ready-to-use process templates, and a guided workflow so teams can start analyzing without external databases or backend setup.
 
-### Learn more
+> **Current focus:** Battery manufacturing and recycling templates are available now. The platform is designed to support additional process domains.
 
-**Visit the landing page →** https://litecab.github.io/LiTeCAB-Landing/
+<br>
+
+### What it does
+
+🔬 **Life Cycle Assessment** — Environmental impact scoring with process-level contribution breakdowns
+
+💰 **Techno-Economic Analysis** — Cost modeling across materials, labor, and operations
+
+♻️ **Circularity Metrics** — Material circularity evaluation across process flows
+
+📦 **Templates + Custom Data** — Start from built-in templates or upload your own process inventory
+
+🖥️ **Standalone Desktop App** — No internet, no Python, no external databases required
+
+<br>
+
+---
+
+<div align="center">
+
+### 🔗 [Visit the landing page →](https://litecab.github.io/LiTeCAB-Landing/)
+
+</div>

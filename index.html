@@ -3,123 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LiTeCAB — LCA &amp; TEA for Battery Processes</title>
-  <meta name="description" content="LiTeCAB Desktop — instant life cycle assessment and techno-economic analysis for battery manufacturing and recycling.">
+  <title>LiTeCAB — LCA &amp; TEA for Process Engineering</title>
+  <meta name="description" content="LiTeCAB Desktop — life cycle assessment and techno-economic analysis in one guided workflow. Currently featuring battery process templates.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ─── Header ─── -->
-  <header class="header">
-    <div class="container header-inner">
-      <img src="logo.png" alt="LiTeCAB" class="header-logo">
-      <nav>
-        <a href="#walkthrough">Walkthrough</a>
-        <a href="#contact" class="nav-cta">Get in Touch</a>
-      </nav>
+  <!-- ═══ Navbar ═══ -->
+  <nav class="navbar" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="nav-brand">
+        <img src="logo.png" alt="LiTeCAB" class="nav-logo">
+      </a>
+      <div class="nav-links">
+        <a href="#problem">Why</a>
+        <a href="#solution">How</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Get Early Access</a>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <main>
 
-    <!-- ─── Hero ─── -->
-    <section class="hero" id="top">
-      <div class="container hero-content">
-        <img src="logo.png" alt="LiTeCAB" class="hero-logo">
-        <h1>Life Cycle Assessment &amp; Techno-Economic Analysis<br>for Battery Processes</h1>
-        <p class="hero-sub">
-          A standalone desktop tool for evaluating environmental impacts, costs,
-          and circularity of lithium-ion battery manufacturing and recycling.
+    <!-- ═══ Hero ═══ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <span class="hero-tag">Desktop Application</span>
+        <h1>From process model<br>to LCA &amp; TEA results.<br><em>Fast.</em></h1>
+        <p class="hero-desc">
+          LiTeCAB is a standalone tool for running environmental impact assessments
+          and cost analyses on manufacturing and recycling processes &mdash;
+          with built-in data, guided workflows, and no setup overhead.
         </p>
-        <div class="hero-pills">
-          <span class="pill">LCA — TRACI v2.1</span>
-          <span class="pill">TEA — Cost Modeling</span>
-          <span class="pill">Circularity Metrics</span>
-          <span class="pill">No Setup Required</span>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Request Access</a>
+          <a href="#solution" class="btn btn-outline">See How It Works</a>
         </div>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-accent">Request Access</a>
-          <a href="#walkthrough" class="btn btn-ghost">Watch Walkthrough</a>
-        </div>
+        <p class="hero-note">Currently featuring battery process templates. More domains coming.</p>
       </div>
     </section>
 
-    <!-- ─── Walkthrough ─── -->
-    <section class="section" id="walkthrough">
+    <!-- ═══ Problem ═══ -->
+    <section class="section" id="problem">
       <div class="container">
-        <h2>See it in action</h2>
-        <div class="video-wrap">
-          <video controls preload="metadata" poster="logo.png">
-            <source src="walkthrough.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <h2 class="section-heading">The problem</h2>
+        <p class="section-lead">Running LCA or TEA today usually means&hellip;</p>
+        <div class="cards-row">
+          <div class="card">
+            <div class="card-icon">&#x23F3;</div>
+            <h3>Hours of setup</h3>
+            <p>Install databases, configure Python environments, connect APIs before any analysis.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">&#x1F527;</div>
+            <h3>Separate tools</h3>
+            <p>One tool for LCA, another for cost, another for reporting. Context gets lost in between.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">&#x1F6AB;</div>
+            <h3>High barrier to entry</h3>
+            <p>New team members need weeks to learn the toolchain before running their first scenario.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── Contact / Interest + Inquiry ─── -->
-    <section class="section section-dark" id="contact">
-      <div class="container form-layout">
-        <div class="form-intro">
-          <h2>Get in Touch</h2>
-          <p>Interested in early access, a live demo, or have a question? Let us know and we'll follow up.</p>
+    <!-- ═══ Solution + Walkthrough ═══ -->
+    <section class="section section-alt" id="solution">
+      <div class="container">
+        <h2 class="section-heading">How LiTeCAB solves this</h2>
+        <p class="section-lead">One desktop app. Templates included. Results in minutes.</p>
+        <div class="features">
+          <div class="feat">
+            <strong>Life Cycle Assessment</strong>
+            <span>Environmental impact scoring with process-level breakdowns</span>
+          </div>
+          <div class="feat">
+            <strong>Techno-Economic Analysis</strong>
+            <span>Material, labor, and operational cost modeling</span>
+          </div>
+          <div class="feat">
+            <strong>Circularity Metrics</strong>
+            <span>Material circularity evaluation across flows</span>
+          </div>
+          <div class="feat">
+            <strong>No Setup</strong>
+            <span>No internet, databases, or Python required</span>
+          </div>
         </div>
 
-        <form id="interest-form" class="form-card" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
+        <div class="walkthrough-block">
+          <h3>Watch the walkthrough</h3>
+          <div class="video-frame">
+            <video controls preload="metadata">
+              <source src="walkthrough.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA + Form ═══ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-block">
+          <div class="cta-text">
+            <h2>Get in touch</h2>
+            <p>
+              Interested in early access, a live demo, or have a technical question?
+              Fill out the form and we'll follow up.
+            </p>
           </div>
-          <div class="field">
-            <label for="organization">Organization</label>
-            <input id="organization" name="organization" type="text" autocomplete="organization">
-          </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="interest_level">Interest</label>
-              <select id="interest_level" name="interest_level" required>
-                <option value="">Select</option>
-                <option value="exploring">Exploring</option>
-                <option value="active-pilot">Ready for pilot</option>
-                <option value="research-use">Research use</option>
-              </select>
+          <form id="interest-form" class="cta-form" novalidate>
+            <div class="f-row f-2col">
+              <div class="f-group">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="f-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
             </div>
-            <div class="field">
-              <label for="next_step">Next step</label>
-              <select id="next_step" name="next_step" required>
-                <option value="">Select</option>
-                <option value="early-access">Early access</option>
-                <option value="live-demo">Live demo</option>
-                <option value="technical-discussion">Technical discussion</option>
-              </select>
+            <div class="f-row f-2col">
+              <div class="f-group">
+                <label for="organization">Organization</label>
+                <input id="organization" name="organization" type="text" autocomplete="organization">
+              </div>
+              <div class="f-group">
+                <label for="next_step">I'm looking for&hellip;</label>
+                <select id="next_step" name="next_step" required>
+                  <option value="">Select</option>
+                  <option value="early-access">Early access</option>
+                  <option value="live-demo">A live demo</option>
+                  <option value="technical-discussion">Technical discussion</option>
+                  <option value="exploring">Just exploring</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label for="inquiry">Question or inquiry</label>
-            <textarea id="inquiry" name="inquiry" rows="3" placeholder="What can we help with?"></textarea>
-          </div>
-          <div class="field checkbox-field">
-            <input id="consent" name="consent" type="checkbox" required>
-            <label for="consent">I agree to be contacted about LiTeCAB.</label>
-          </div>
-          <button class="btn btn-accent btn-full" type="submit">Send</button>
-          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-        </form>
+            <div class="f-group">
+              <label for="inquiry">Question or comment</label>
+              <textarea id="inquiry" name="inquiry" rows="3" placeholder="Anything you'd like us to know or answer?"></textarea>
+            </div>
+            <div class="f-check">
+              <input id="consent" name="consent" type="checkbox" required>
+              <label for="consent">I agree to be contacted about LiTeCAB.</label>
+            </div>
+            <button class="btn btn-primary btn-full" type="submit">Send</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container">
-      <p>LiTeCAB &mdash; Life Cycle Assessment &amp; Techno-Economic Analysis for Battery Processes</p>
+      <p>LiTeCAB &mdash; Life Cycle Assessment &amp; Techno-Economic Analysis</p>
     </div>
   </footer>
 
