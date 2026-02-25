@@ -77,7 +77,7 @@ body {
 
 .hero-logo {
   height: 240px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .hero h1 {
@@ -263,7 +263,7 @@ body {
 .solution-grid {
   display: grid !important;
   grid-template-columns: 1fr 1.2fr !important;
-  gap: 72px;
+  gap: 96px;
   align-items: center;
   min-height: 420px;
 }
@@ -285,7 +285,7 @@ body {
 .solution-right {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-items: flex-start;
 }
 
 .video-badge-btn {
@@ -300,6 +300,7 @@ body {
   padding: 6px 14px;
   border-radius: 6px;
   margin-bottom: 16px;
+  align-self: flex-start;
 }
 
 /* ── Features ── */
