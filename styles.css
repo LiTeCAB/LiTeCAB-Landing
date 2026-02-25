@@ -262,10 +262,10 @@ body {
 /* ── Solution grid ── */
 .solution-grid {
   display: grid !important;
-  grid-template-columns: 1fr 1.2fr !important;
+  grid-template-columns: 1fr 2fr !important;
   gap: 96px;
   align-items: center;
-  min-height: 520px;
+  min-height: 600px;
 }
 
 .solution-left {
