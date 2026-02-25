@@ -34,16 +34,14 @@ body {
 }
 
 .nav-brand {
-  display: flex; align-items: center;
-  height: 100%;
-  margin-left: -8px;
-}
-.nav-logo {
-  height: 72px;
-  object-fit: contain;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a2a42;
+  text-decoration: none;
+  letter-spacing: -0.5px;
 }
 
-.nav-links { display: flex; align-items: center; gap: 32px; margin-right: -8px; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
 
 .nav-links a {
   color: #4a5568;
@@ -77,22 +75,18 @@ body {
 
 .hero-inner { max-width: 100%; margin: 0 auto; }
 
-.hero-tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #4fd1c5;
-  margin-bottom: 20px;
+.hero-logo {
+  height: 80px;
+  margin-bottom: 24px;
 }
 
 .hero h1 {
-  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+  font-size: clamp(2.4rem, 4vw, 3rem);
   font-weight: 700;
-  line-height: 1.12;
+  line-height: 1.1;
   margin-bottom: 20px;
   color: #fff;
+  white-space: nowrap;
 }
 
 .hero h1 em {
@@ -113,11 +107,6 @@ body {
   margin-bottom: 20px;
 }
 
-.hero-note {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.35);
-  font-style: italic;
-}
 
 /* ── Buttons ── */
 .btn {
@@ -179,22 +168,21 @@ body {
 .section-light {
   background: #f4f7fb !important;
   color: #1a2a42;
+  padding: 96px 0;
 }
 
 .section-light .section-heading {
   color: #1a2a42;
-}
-
-.section-light .section-lead {
-  color: #5f6e82;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
 }
 
 .section-light .cta-text h2 {
-  color: #1a2a42;
+  color: #1a2a42 !important;
 }
 
 .section-light .cta-text p {
-  color: #5f6e82;
+  color: #5f6e82 !important;
 }
 
 .section-light .cta-form {
@@ -262,7 +250,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #1a2a42;
+  color: #2563eb;
 }
 
 .card p {
@@ -273,18 +261,28 @@ body {
 
 /* ── Solution grid ── */
 .solution-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 36px;
+  display: grid !important;
+  grid-template-columns: 1fr 1.2fr !important;
+  gap: 48px;
   align-items: center;
+}
+
+.solution-left {
+  display: block;
 }
 
 .solution-left .section-heading {
   text-align: left;
+  margin-bottom: 8px;
 }
 
 .solution-left .section-lead {
   text-align: left;
+  margin-bottom: 24px;
+}
+
+.solution-right {
+  display: block;
 }
 
 /* ── Features ── */
