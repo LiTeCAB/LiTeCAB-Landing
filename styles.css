@@ -14,9 +14,9 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1040px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 /* ── Navbar ── */
@@ -29,11 +29,11 @@ body {
 
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
-  height: 72px;
+  height: 80px;
 }
 
-.nav-brand { display: flex; align-items: center; height: 100%; }
-.nav-logo { height: 44px; }
+.nav-brand { display: flex; align-items: center; height: 100%; padding: 0; }
+.nav-logo { height: 56px; }
 
 .nav-links { display: flex; align-items: center; gap: 28px; }
 
@@ -59,7 +59,7 @@ body {
 
 /* ── Hero ── */
 .hero {
-  padding: 140px 0 80px;
+  padding: 160px 0 80px;
   text-align: center;
   background:
     radial-gradient(ellipse at 30% 0%, rgba(30,58,95,0.6) 0%, transparent 60%),
@@ -67,7 +67,7 @@ body {
     #0f1a2e;
 }
 
-.hero-inner { max-width: 800px; margin: 0 auto; }
+.hero-inner { max-width: 900px; margin: 0 auto; }
 
 .hero-tag {
   display: inline-block;
@@ -167,9 +167,9 @@ body {
   margin-bottom: 36px;
 }
 
-/* ── Problem section (light) ── */
+/* ── Light sections (Problem, CTA) ── */
 .section-light {
-  background: #f4f7fb;
+  background: #f4f7fb !important;
   color: #1a2a42;
 }
 
@@ -179,6 +179,50 @@ body {
 
 .section-light .section-lead {
   color: #5f6e82;
+}
+
+.section-light .cta-text h2 {
+  color: #1a2a42;
+}
+
+.section-light .cta-text p {
+  color: #5f6e82;
+}
+
+.section-light .cta-form {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.section-light .f-group label {
+  color: #4a5568;
+}
+
+.section-light .f-group input,
+.section-light .f-group select,
+.section-light .f-group textarea {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  color: #1a2a42;
+}
+
+.section-light .f-group input::placeholder,
+.section-light .f-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.section-light .f-group select option {
+  background: #fff;
+  color: #1a2a42;
+}
+
+.section-light .f-check label {
+  color: #6b7280;
+}
+
+.section-light .form-status {
+  color: #6b7280;
 }
 
 /* ── Problem cards ── */
@@ -219,12 +263,27 @@ body {
   line-height: 1.55;
 }
 
+/* ── Solution grid ── */
+.solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.solution-left .section-heading {
+  text-align: left;
+}
+
+.solution-left .section-lead {
+  text-align: left;
+}
+
 /* ── Features ── */
 .features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-bottom: 40px;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
 .feat {
@@ -246,18 +305,7 @@ body {
   color: rgba(255,255,255,0.5);
 }
 
-/* ── Walkthrough ── */
-.walkthrough-block {
-  text-align: center;
-}
-
-.walkthrough-block h3 {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 16px;
-  color: rgba(255,255,255,0.7);
-}
-
+/* ── Video ── */
 .video-frame {
   border-radius: 10px;
   overflow: hidden;
@@ -369,10 +417,12 @@ body {
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .hero { padding: 120px 0 60px; }
+  .hero { padding: 130px 0 60px; }
   .hero h1 { font-size: 1.8rem; }
   .cards-row { grid-template-columns: 1fr; }
-  .features { grid-template-columns: 1fr; }
+  .solution-grid { grid-template-columns: 1fr; }
+  .solution-left .section-heading,
+  .solution-left .section-lead { text-align: center; }
   .cta-block { grid-template-columns: 1fr; }
   .f-2col { grid-template-columns: 1fr; }
   .nav-links a:not(.nav-cta) { display: none; }
