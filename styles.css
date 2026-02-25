@@ -76,8 +76,8 @@ body {
 .hero-inner { max-width: 100%; margin: 0 auto; }
 
 .hero-logo {
-  height: 120px;
-  margin-bottom: 28px;
+  height: 240px;
+  margin-bottom: 32px;
 }
 
 .hero h1 {
@@ -263,8 +263,9 @@ body {
 .solution-grid {
   display: grid !important;
   grid-template-columns: 1fr 1.2fr !important;
-  gap: 48px;
-  align-items: stretch;
+  gap: 72px;
+  align-items: center;
+  min-height: 420px;
 }
 
 .solution-left {
@@ -287,14 +288,18 @@ body {
   height: 100%;
 }
 
-.video-badge {
+.video-badge-btn {
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   color: #4fd1c5;
-  margin-bottom: 12px;
+  background: rgba(79,209,197,0.1);
+  border: 1px solid rgba(79,209,197,0.3);
+  padding: 6px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
 }
 
 /* ── Features ── */
