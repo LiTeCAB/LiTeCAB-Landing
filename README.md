@@ -34,6 +34,6 @@ LiTeCAB helps researchers and engineers move from process concepts to quantified
 
 <div align="center">
 
-### 🔗 [Visit the landing page →](https://litecab.github.io/LiTeCAB-Landing/)
+### 🔗 [Learn More →](https://litecab.github.io/LiTeCAB-Landing/)
 
 </div>
