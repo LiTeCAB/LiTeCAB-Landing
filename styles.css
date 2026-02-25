@@ -14,7 +14,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 32px;
 }
@@ -262,10 +262,10 @@ body {
 /* ── Solution grid ── */
 .solution-grid {
   display: grid !important;
-  grid-template-columns: 1fr 2fr !important;
+  grid-template-columns: 1fr 3.5fr !important;
   gap: 96px;
   align-items: center;
-  min-height: 600px;
+  min-height: 700px;
 }
 
 .solution-left {
