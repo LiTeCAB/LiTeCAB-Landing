@@ -22,9 +22,10 @@ body {
 /* ── Navbar ── */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-  background: #fff;
-  border-bottom: 1px solid #e5e7eb;
+  background: #edf4f3; /* soft mint tint — pairs with #4fd1c5 accent */
+  border-bottom: 1px solid #d5e3e0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  backdrop-filter: saturate(140%);
 }
 
 .nav-inner {
@@ -107,6 +108,28 @@ body {
   margin-bottom: 20px;
 }
 
+/* Scroll-down hint under the hero CTA */
+.hero-scroll-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.82rem;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+.hero-scroll-hint:hover { color: #4fd1c5; }
+.hero-scroll-hint .chev {
+  display: inline-block;
+  animation: hint-bounce 1.8s ease-in-out infinite;
+}
+@keyframes hint-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(4px); }
+}
+
 
 /* ── Buttons ── */
 .btn {
@@ -166,7 +189,7 @@ body {
 
 /* ── Light sections (Problem, CTA) ── */
 .section-light {
-  background: #f4f7fb !important;
+  background: #e6efec !important; /* mint-tinted, clearly not pure white */
   color: #1a2a42;
   padding: 96px 0;
 }
@@ -186,8 +209,8 @@ body {
 }
 
 .section-light .cta-form {
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background: #f5faf9;
+  border: 1px solid #d5e3e0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
@@ -229,8 +252,8 @@ body {
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background: #f5faf9;
+  border: 1px solid #d5e3e0;
   border-radius: 12px;
   padding: 32px 24px;
   text-align: center;
@@ -432,14 +455,29 @@ body {
 
 /* ── Footer ── */
 .site-footer {
-  border-top: 1px solid rgba(255,255,255,0.04);
-  padding: 20px 0;
+  background: #0a1220;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 36px 0 28px;
   text-align: center;
 }
 
+.site-footer .footer-questions {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.78);
+  margin-bottom: 6px;
+}
+
+.site-footer .footer-questions a {
+  color: #4fd1c5;
+  text-decoration: none;
+  font-weight: 500;
+}
+.site-footer .footer-questions a:hover { text-decoration: underline; }
+
 .site-footer p {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.35);
+  margin: 0;
 }
 
 /* ── Responsive ── */
