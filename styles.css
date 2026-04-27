@@ -22,8 +22,8 @@ body {
 /* ── Navbar ── */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-  background: #edf4f3; /* soft mint tint — pairs with #4fd1c5 accent */
-  border-bottom: 1px solid #d5e3e0;
+  background: #d5e8e4; /* mint tint — pairs with #4fd1c5 accent */
+  border-bottom: 1px solid #b9d4cd;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   backdrop-filter: saturate(140%);
 }
@@ -189,7 +189,7 @@ body {
 
 /* ── Light sections (Problem, CTA) ── */
 .section-light {
-  background: #e6efec !important; /* mint-tinted, clearly not pure white */
+  background: #cde2db !important; /* mint-tinted, clearly not pure white */
   color: #1a2a42;
   padding: 96px 0;
 }
@@ -209,8 +209,8 @@ body {
 }
 
 .section-light .cta-form {
-  background: #f5faf9;
-  border: 1px solid #d5e3e0;
+  background: #ecf5f2;
+  border: 1px solid #b9d4cd;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
@@ -252,8 +252,8 @@ body {
 }
 
 .card {
-  background: #f5faf9;
-  border: 1px solid #d5e3e0;
+  background: #ecf5f2;
+  border: 1px solid #b9d4cd;
   border-radius: 12px;
   padding: 32px 24px;
   text-align: center;
