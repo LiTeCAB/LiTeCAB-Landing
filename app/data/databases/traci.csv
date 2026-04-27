@@ -1,0 +1,11 @@
+Impact category ,"soda ash, light | soda production, solvay process | RoW | kilogram | ecoinvent-3.11-cutoff","electricity, high voltage | market group for electricity, high voltage | US | kilowatt hour | ecoinvent-3.11-cutoff","water, ultrapure | water production, ultrapure | RoW | kilogram | ecoinvent-3.11-cutoff"
+acidification no LT ,0.004389794,0.001078343,2.5906E-05
+climate change no LT | global warming potential (GWP100) no LT,0.423016051,0.473643795,0.005975497
+ecotoxicity: freshwater no LT | ecotoxicity: freshwater no LT,0.311810566,0.077751019,0.001562315
+eutrophication no LT | eutrophication potential no LT,0.00055899,0.000337913,0.000347702
+human toxicity: carcinogenic no LT | human toxicity: carcinogenic no LT,4.26858E-09,1.87667E-09,3.97977E-11
+human toxicity: non-carcinogenic no LT | human toxicity: non-carcinogenic no LT,8.6092E-08,2.47607E-08,6.6241E-10
+ozone depletion no LT | ozone depletion potential (ODP) no LT,2.40691E-09,1.49276E-09,3.09134E-09
+particulate matter formation no LT | particulate matter formation potential (PMFP) no LT,0.000518223,0.001161802,8.61615E-06
+photochemical oxidant formation no LT | maximum incremental reactivity (MIR) no LT,0.029400216,0.013171867,0.000365494
+,,,

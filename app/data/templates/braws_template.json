@@ -1,0 +1,625 @@
+{
+  "project_name": "BRAWS Recycling Process",
+  "description": "Battery Recycling using Aqueous Water-based Separation (BRAWS) process - Full workflow template (12 processes)",
+  "version": "1.0",
+  "functional_unit": {
+    "description": "1 end-of-life Li-NMC battery module processed (181.44 kg)",
+    "scale": "module",
+    "weight_kg": 181.44,
+    "battery_modules": 1,
+    "feedstock_type": "End-of-life Li-NMC battery cells"
+  },
+  "processes": {
+    "P001": {
+      "id": "P001",
+      "name": "Battery_Refrigeration",
+      "process_type": "Preparation",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 0,
+      "is_side_input": false,
+      "energy_input_kwh": 88.1,
+      "equipment": "Refrigerator_115V_6.2A",
+      "parameters": {
+        "duration_hours": 2.5,
+        "temperature_c": 4,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [
+        "P002"
+      ],
+      "description": "Refrigeration",
+      "products": [],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 88.1,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        }
+      ]
+    },
+    "P002": {
+      "id": "P002",
+      "name": "Battery_Charging",
+      "process_type": "Preparation",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 0,
+      "is_side_input": false,
+      "energy_input_kwh": 89.1,
+      "equipment": "Arbin_RBT3_380V_45A",
+      "parameters": {
+        "duration_hours": 2.5,
+        "temperature_c": 4,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [
+        "P003"
+      ],
+      "description": "Charging at 2C rate for 2.5h with refrigeration (89.1 kWh total: 85.5 charging + 3.6 refrigeration)",
+      "products": [],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 89.1,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        }
+      ]
+    },
+    "P003": {
+      "id": "P003",
+      "name": "Cell_Discharging",
+      "process_type": "Preparation",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 0,
+      "is_side_input": false,
+      "energy_input_kwh": 17.1,
+      "equipment": "Arbin_RBT3_380V_45A",
+      "parameters": {
+        "duration_hours": 2,
+        "temperature_c": 25,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [
+        "P004"
+      ],
+      "description": "Discharge before disassembly",
+      "products": [],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 17.1,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        }
+      ]
+    },
+    "P004": {
+      "id": "P004",
+      "name": "Battery_Disassembly",
+      "process_type": "Disassembly",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 1,
+      "is_side_input": false,
+      "energy_input_kwh": 7.2,
+      "equipment": "Robotic_Disassembly_120V_15A",
+      "parameters": {
+        "duration_hours": 4,
+        "temperature_c": 25,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [
+        "P005"
+      ],
+      "description": "Industrial scale robotic disassembly",
+      "products": [],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 7.2,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        }
+      ]
+    },
+    "P005": {
+      "id": "P005",
+      "name": "Box_Evacuation",
+      "process_type": "Disassembly",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 1,
+      "is_side_input": false,
+      "energy_input_kwh": 1.8,
+      "equipment": "Vacuum_Pump_120V_15A",
+      "parameters": {
+        "duration_hours": 1,
+        "temperature_c": 25,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [
+        "P006"
+      ],
+      "description": "Controlled atmosphere evacuation",
+      "products": [],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 1.8,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        }
+      ]
+    },
+    "P006": {
+      "id": "P006",
+      "name": "Pouch_Cell_Opening",
+      "process_type": "Disassembly",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 1,
+      "is_side_input": false,
+      "energy_input_kwh": 43.2,
+      "equipment": "Robotic_Disassembly_120V_15A",
+      "parameters": {
+        "duration_hours": 24,
+        "temperature_c": 25,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [
+        "P007"
+      ],
+      "description": "24h robotic opening of pouch cells",
+      "products": [],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 43.2,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        }
+      ]
+    },
+    "P007": {
+      "id": "P007",
+      "name": "Disassembled_Batteries_Dissolution",
+      "process_type": "Chemical_Processing",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 2,
+      "is_side_input": false,
+      "energy_input_kwh": 1.3,
+      "equipment": "Stainless_Steel_Reactor",
+      "parameters": {
+        "duration_hours": 3,
+        "temperature_c": 25,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [
+        "P008",
+        "P009"
+      ],
+      "description": "95% recovery rate dissolution (10kg water becomes lithium solution)",
+      "products": [
+        {
+          "material": "Steel",
+          "quantity": 19,
+          "unit": "kg"
+        },
+        {
+          "material": "Copper",
+          "quantity": 19,
+          "unit": "kg"
+        },
+        {
+          "material": "Aluminum",
+          "quantity": 35,
+          "unit": "kg"
+        },
+        {
+          "material": "Separator",
+          "quantity": 1.71,
+          "unit": "kg"
+        },
+        {
+          "material": "Delithiated_Cathode",
+          "quantity": 54.2,
+          "unit": "kg"
+        },
+        {
+          "material": "Li_Solution",
+          "quantity": 10,
+          "unit": "kg"
+        }
+      ],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 1.3,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        },
+        {
+          "name": "Water",
+          "quantity": 10,
+          "unit": "kilogram",
+          "activity_name": "water production, ultrapure",
+          "reference_product": "water, ultrapure",
+          "location": "RoW",
+          "traci_scores_per_unit": {
+            "acidification": 0.00002590744596061084,
+            "climate_change": 0.005975497094308466,
+            "ecotoxicity_freshwater": 0.10981961317765973,
+            "eutrophication": 0.0003730095870964186,
+            "human_toxicity_carcinogenic": 4.974086822100288e-9,
+            "human_toxicity_non_carcinogenic": 2.208432165905287e-9,
+            "ozone_depletion": 3.09134451003163e-9,
+            "particulate_matter": 0.000008646512855915803,
+            "photochemical_oxidant": 0.0003654953470678274
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.001,
+          "cost_unit": "USD/kg"
+        }
+      ]
+    },
+    "P008": {
+      "id": "P008",
+      "name": "Anode_Material_Separation",
+      "process_type": "Chemical_Processing",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 3,
+      "is_side_input": false,
+      "energy_input_kwh": 0.75,
+      "equipment": "Buchner_Filtration_Kit",
+      "parameters": {
+        "duration_hours": 1,
+        "temperature_c": 25,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [
+        "P011"
+      ],
+      "description": "Separation of lithium solution from rest of materials",
+      "products": [],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 0.75,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        }
+      ]
+    },
+    "P009": {
+      "id": "P009",
+      "name": "Na2CO3_Preparation",
+      "process_type": "Chemical_Processing",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 3,
+      "is_side_input": false,
+      "energy_input_kwh": 1.3,
+      "equipment": "Stainless_Steel_Reactor",
+      "parameters": {
+        "duration_hours": 3,
+        "temperature_c": 25,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [
+        "P010"
+      ],
+      "description": "Preparing Na2CO3 solution (25kg water + 5kg Na2CO3)",
+      "products": [],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 1.3,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        },
+        {
+          "name": "Water",
+          "quantity": 25,
+          "unit": "kilogram",
+          "activity_name": "water production, ultrapure",
+          "reference_product": "water, ultrapure",
+          "location": "RoW",
+          "traci_scores_per_unit": {
+            "acidification": 0.00002590744596061084,
+            "climate_change": 0.005975497094308466,
+            "ecotoxicity_freshwater": 0.10981961317765973,
+            "eutrophication": 0.0003730095870964186,
+            "human_toxicity_carcinogenic": 4.974086822100288e-9,
+            "human_toxicity_non_carcinogenic": 2.208432165905287e-9,
+            "ozone_depletion": 3.09134451003163e-9,
+            "particulate_matter": 0.000008646512855915803,
+            "photochemical_oxidant": 0.0003654953470678274
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.001,
+          "cost_unit": "USD/kg"
+        },
+        {
+          "name": "Soda Ash (Sodium Carbonate) Na2CO3",
+          "quantity": 5,
+          "unit": "kilogram",
+          "activity_name": "soda production, solvay process",
+          "reference_product": "soda ash, light",
+          "location": "RoW",
+          "traci_scores_per_unit": {
+            "acidification": 0.00438988397506143,
+            "climate_change": 0.4230160782839509,
+            "ecotoxicity_freshwater": 19.40847650553868,
+            "eutrophication": 0.00226692530598823,
+            "human_toxicity_carcinogenic": 2.0293009346186136e-7,
+            "human_toxicity_non_carcinogenic": 3.3075488059606136e-7,
+            "ozone_depletion": 2.406907563978243e-9,
+            "particulate_matter": 0.0005244800423824467,
+            "photochemical_oxidant": 0.029400273784111513
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 81.25,
+          "cost_unit": "USD/kg"
+        }
+      ]
+    },
+    "P010": {
+      "id": "P010",
+      "name": "LiCO3_Precipitation",
+      "process_type": "Chemical_Processing",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 3,
+      "is_side_input": false,
+      "energy_input_kwh": 0,
+      "equipment": "Buchner_Filtration_Kit",
+      "parameters": {
+        "duration_hours": 0.5,
+        "temperature_c": 25,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [
+        "P012"
+      ],
+      "description": "Lab-scale yield scaling (2.2kg Li2CO3 from lithium solution)",
+      "products": [],
+      "lci_inputs": []
+    },
+    "P011": {
+      "id": "P011",
+      "name": "Graphite_Purification",
+      "process_type": "Thermal_Processing",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 4,
+      "is_side_input": false,
+      "energy_input_kwh": 28.5,
+      "equipment": "Muffle_Furnace_1000C",
+      "parameters": {
+        "duration_hours": 3,
+        "temperature_c": 1000,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [],
+      "description": "95% recovery rate purification",
+      "products": [
+        {
+          "material": "Graphite",
+          "quantity": 49.4,
+          "unit": "kg"
+        }
+      ],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 28.5,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        }
+      ]
+    },
+    "P012": {
+      "id": "P012",
+      "name": "Relithiated_Cathode_Processing",
+      "process_type": "Thermal_Processing",
+      "manufacturing_category": "Recycling",
+      "hierarchy_level": 4,
+      "is_side_input": false,
+      "energy_input_kwh": 47.5,
+      "equipment": "Muffle_Furnace_800C",
+      "parameters": {
+        "duration_hours": 5,
+        "temperature_c": 800,
+        "pressure_atm": 1
+      },
+      "next_process_ids": [],
+      "description": "Relithiated cathode active material",
+      "products": [
+        {
+          "material": "Relithiated_Cathode",
+          "quantity": 54.2,
+          "unit": "kg"
+        }
+      ],
+      "lci_inputs": [
+        {
+          "name": "Electricity US Market",
+          "quantity": 47.5,
+          "unit": "kilowatt hour",
+          "activity_name": "market group for electricity, high voltage",
+          "reference_product": "electricity, high voltage",
+          "location": "US",
+          "traci_scores_per_unit": {
+            "acidification": 0.0010783466898392033,
+            "climate_change": 0.47364378364056875,
+            "ecotoxicity_freshwater": 4.0086254417516285,
+            "eutrophication": 0.0030612886136400694,
+            "human_toxicity_carcinogenic": 6.769333359516778e-8,
+            "human_toxicity_non_carcinogenic": 1.2086307600978304e-7,
+            "ozone_depletion": 1.4927648526597362e-9,
+            "particulate_matter": 0.0011644174367318656,
+            "photochemical_oxidant": 0.013172422097287091
+          },
+          "ecoinvent_version": "3.11",
+          "cost_per_unit": 0.071,
+          "cost_unit": "USD/kWh"
+        }
+      ]
+    }
+  }
+}

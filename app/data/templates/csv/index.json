@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "blank_template.csv",
+    "name": "blank template"
+  },
+  {
+    "filename": "braws_recycling.csv",
+    "name": "braws recycling"
+  },
+  {
+    "filename": "lfp_cell_manufacturing.csv",
+    "name": "lfp cell manufacturing"
+  },
+  {
+    "filename": "nmc111_cell_manufacturing.csv",
+    "name": "nmc111 cell manufacturing"
+  },
+  {
+    "filename": "nmc622_cell_manufacturing.csv",
+    "name": "nmc622 cell manufacturing"
+  },
+  {
+    "filename": "nmc811_cell_manufacturing.csv",
+    "name": "nmc811 cell manufacturing"
+  }
+]
