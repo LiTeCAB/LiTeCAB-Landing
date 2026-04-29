@@ -559,51 +559,62 @@ body {
 .site-footer {
   background: #0a1220;
   border-top: 1px solid rgba(255,255,255,0.06);
-  padding: 36px 0 28px;
+  padding: 22px 0;
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-row > * {
+  font-size: 0.78rem;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.footer-tagline {
+  color: rgba(255,255,255,0.45);
+  text-align: left;
+}
+
+.footer-questions {
+  color: rgba(255,255,255,0.7);
   text-align: center;
 }
-
-.footer-funding {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 7px 16px 7px 14px;
-  margin-bottom: 18px;
-  background: rgba(79,209,197,0.06);
-  border: 1px solid rgba(79,209,197,0.22);
-  border-radius: 999px;
-}
-.footer-funding-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: rgba(255,255,255,0.55);
-}
-.footer-funding-name {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #4fd1c5;
-  letter-spacing: 0.06em;
-}
-
-.site-footer .footer-questions {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.78);
-  margin-bottom: 6px;
-}
-
-.site-footer .footer-questions a {
+.footer-questions a {
   color: #4fd1c5;
   text-decoration: none;
   font-weight: 500;
 }
-.site-footer .footer-questions a:hover { text-decoration: underline; }
+.footer-questions a:hover { text-decoration: underline; }
 
-.site-footer p {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.35);
-  margin: 0;
+.footer-funding {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px 5px 10px;
+  background: rgba(79,209,197,0.06);
+  border: 1px solid rgba(79,209,197,0.22);
+  border-radius: 999px;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+.footer-funding-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(255,255,255,0.55);
+}
+.footer-funding-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4fd1c5;
+  letter-spacing: 0.05em;
 }
 
 /* ── Responsive ── */
@@ -626,4 +637,7 @@ body {
   .nav-links a:not(.nav-cta) { display: none; }
   .hero-btns { flex-direction: column; align-items: center; }
   .section-light { padding: 64px 0; }
+  .footer-row { flex-direction: column; gap: 12px; text-align: center; }
+  .footer-tagline, .footer-questions { text-align: center; }
+  .footer-funding { margin-left: 0; }
 }
