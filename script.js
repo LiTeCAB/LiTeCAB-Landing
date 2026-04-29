@@ -28,6 +28,52 @@ const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbwJzu-C8bQKH2Iw
   update();
 })();
 
+// ── Active nav link: highlight the section currently in view ──
+(() => {
+  const links = Array.from(
+    document.querySelectorAll('.nav-links a[href^="#"]')
+  ).filter((a) => a.getAttribute("href") !== "#");
+
+  const linkBySection = new Map();
+  links.forEach((a) => {
+    const id = a.getAttribute("href").slice(1);
+    const section = document.getElementById(id);
+    if (section) linkBySection.set(section, a);
+  });
+
+  if (!linkBySection.size || !("IntersectionObserver" in window)) return;
+
+  const visibility = new Map();
+  const setActive = (link) => {
+    links.forEach((l) => l.classList.toggle("is-active", l === link));
+  };
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => visibility.set(e.target, e.intersectionRatio));
+      let bestSection = null;
+      let bestRatio = 0;
+      visibility.forEach((ratio, section) => {
+        if (ratio > bestRatio) {
+          bestRatio = ratio;
+          bestSection = section;
+        }
+      });
+      if (bestSection && bestRatio > 0) {
+        setActive(linkBySection.get(bestSection));
+      } else {
+        setActive(null);
+      }
+    },
+    {
+      rootMargin: "-30% 0px -50% 0px",
+      threshold: [0, 0.25, 0.5, 0.75, 1],
+    }
+  );
+
+  linkBySection.forEach((_, section) => io.observe(section));
+})();
+
 // ── Reveal-on-scroll: fade + slide up sections as they enter the viewport ──
 (() => {
   const targets = document.querySelectorAll(".hero-inner, .section, .site-footer .container");
